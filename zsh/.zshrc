@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux postgres)
+plugins=(git tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,3 +83,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+source ~/z.sh
+
+export GOPATH=~/go
+export PATH="/usr/local/go/bin:/home/cshen/google-cloud-sdk/bin:/home/cshen/hub:$PATH"
+alias git=hub
