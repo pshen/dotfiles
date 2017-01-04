@@ -83,3 +83,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias sagi='sudo apt-get install'
+alias sagt='sudo apt-get update'
+alias sagd='sudo apt-get upgrade'
+alias sagdd='sudo apt-get dist-upgrade'
+alias acs='apt-cache search'
+alias acsh='apt-cache show'
+
+eval `dircolors ~/.dir_colors/dircolors`
