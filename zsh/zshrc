@@ -90,4 +90,5 @@ alias sagdd='sudo apt-get dist-upgrade'
 alias acs='apt-cache search'
 alias acsh='apt-cache show'
 
+# https://github.com/Anthony25/gnome-terminal-colors-solarized
 eval `dircolors ~/.dir_colors/dircolors`
