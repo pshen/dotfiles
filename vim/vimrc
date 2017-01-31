@@ -9,6 +9,12 @@ Plug 'pearofducks/ansible-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+" https://github.com/ntpeters/vim-better-whitespace
+Plug 'ntpeters/vim-better-whitespace'
+
+" https://github.com/vim-syntastic/syntastic
+Plug 'vim-syntastic/syntastic'
+
 " Initialize plugin system
 call plug#end()
 
@@ -38,3 +44,13 @@ au FocusGained * :set relativenumber
 
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
+
+" Recommended settings for syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
