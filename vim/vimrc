@@ -46,6 +46,18 @@ au FocusGained * :set relativenumber
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 
+""""""""""""""""""""""""""""""""""""""""""""""
+" http://kennedysgarage.com/articles/nerdtree/
+""""""""""""""""""""""""""""""""""""""""""""""
+" Give a shortcut key to NERD Tree
+map <F2> :NERDTreeToggle<CR>
+
+"Show hidden files in NerdTree
+let NERDTreeShowHidden=1
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" https://github.com/vim-syntastic/syntastic
+""""""""""""""""""""""""""""""""""""""""""""""
 " Recommended settings for syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -55,12 +67,3 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-""""""""""""""""""""""""""""""""""""""""""""""
-" http://kennedysgarage.com/articles/nerdtree/
-""""""""""""""""""""""""""""""""""""""""""""""
-" Give a shortcut key to NERD Tree
-map <F2> :NERDTreeToggle<CR>
-
-"Show hidden files in NerdTree
-let NERDTreeShowHidden=1
