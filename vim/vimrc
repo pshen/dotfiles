@@ -15,6 +15,16 @@ Plug 'ntpeters/vim-better-whitespace'
 " https://github.com/vim-syntastic/syntastic
 Plug 'vim-syntastic/syntastic'
 
+" https://github.com/pearofducks/ansible-vim
+Plug 'pearofducks/ansible-vim'
+
+" https://github.com/tpope/vim-fugitive
+Plug 'tpope/vim-fugitive'
+
+" https://github.com/vim-airline/vim-airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " Initialize plugin system
 call plug#end()
 
@@ -29,7 +39,6 @@ set expandtab
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " http://jeffkreeftmeijer.com/2012/relative-line-numbers-in-vim-for-super-fast-movement/
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 function! NumberToggle()
   if(&relativenumber == 1)
     set number
@@ -67,3 +76,24 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" https://github.com/pearofducks/ansible-vim
+"""""""""""""""""""""""""""""""""""""""""""""""
+let g:ansible_extra_syntaxes = "sh.vim ruby.vim"
+let g:ansible_attribute_highlight = "ob"
+let g:ansible_name_highlight = 'd'
+let g:ansible_extra_keywords_highlight = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" https://github.com/tpope/vim-fugitive
+"""""""""""""""""""""""""""""""""""""""""""""""
+set statusline+=%{fugitive#statusline()}
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" https://github.com/vim-airline/vim-airline
+"""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
