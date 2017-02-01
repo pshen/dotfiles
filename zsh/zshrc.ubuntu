@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux)
+plugins=(git tmux vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -87,8 +87,15 @@ alias sagi='sudo apt-get install'
 alias sagt='sudo apt-get update'
 alias sagd='sudo apt-get upgrade'
 alias sagdd='sudo apt-get dist-upgrade'
+
 alias acs='apt-cache search'
 alias acsh='apt-cache show'
 
+alias srcdus10='source /home/cshen/env/dus10'
+alias srcdus20='source /home/cshen/env/dus20'
+alias srcffm10='source /home/cshen/env/ffm10'
+
 # https://github.com/Anthony25/gnome-terminal-colors-solarized
 eval `dircolors ~/.dir_colors/dircolors`
+
+export PATH="/home/cshen/tools:$PATH"

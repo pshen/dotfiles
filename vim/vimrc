@@ -26,8 +26,9 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " http://jeffkreeftmeijer.com/2012/relative-line-numbers-in-vim-for-super-fast-movement/
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function! NumberToggle()
   if(&relativenumber == 1)
@@ -54,3 +55,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" http://kennedysgarage.com/articles/nerdtree/
+""""""""""""""""""""""""""""""""""""""""""""""
+" Give a shortcut key to NERD Tree
+map <F2> :NERDTreeToggle<CR>
+
+"Show hidden files in NerdTree
+let NERDTreeShowHidden=1
