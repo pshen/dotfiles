@@ -94,6 +94,7 @@ alias acsh='apt-cache show'
 alias srcdus10='source /home/cshen/env/dus10'
 alias srcdus20='source /home/cshen/env/dus20'
 alias srcffm10='source /home/cshen/env/ffm10'
+alias srcdev10='source /home/cshen/env/dev10'
 
 # https://github.com/Anthony25/gnome-terminal-colors-solarized
 eval `dircolors ~/.dir_colors/dircolors`
