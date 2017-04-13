@@ -95,6 +95,9 @@ alias srcdus10='source /home/cshen/env/dus10'
 alias srcdus20='source /home/cshen/env/dus20'
 alias srcffm10='source /home/cshen/env/ffm10'
 alias srcdev10='source /home/cshen/env/dev10'
+alias srcdus21='source /home/cshen/env/dus21'
+
+alias openstack='openstack --insecure'
 
 # https://github.com/Anthony25/gnome-terminal-colors-solarized
 eval `dircolors ~/.dir_colors/dircolors`
