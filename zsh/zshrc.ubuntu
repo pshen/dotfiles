@@ -96,6 +96,7 @@ alias srcdus20='source /home/cshen/env/dus20'
 alias srcffm10='source /home/cshen/env/ffm10'
 alias srcdev10='source /home/cshen/env/dev10'
 alias srcdus21='source /home/cshen/env/dus21'
+alias srcsha11='source /home/cshen/env/sha11'
 
 alias openstack='openstack --insecure'
 
