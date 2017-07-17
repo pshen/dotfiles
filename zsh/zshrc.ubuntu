@@ -100,6 +100,14 @@ alias srcsha11='source /home/cshen/env/sha11'
 
 alias openstack='openstack --insecure'
 
+alias sha11='ssh adm0001.sha11'
+alias dus21='ssh adm0001.dus21'
+alias dev10='ssh adm0001.dev10'
+
+alias dus10='ssh utl0001.dus10'
+alias dus20='ssh utl0001.dus20'
+alias ffm10='ssh utl0001.ffm10'
+
 # https://github.com/Anthony25/gnome-terminal-colors-solarized
 eval `dircolors ~/.dir_colors/dircolors`
 
