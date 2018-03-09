@@ -99,6 +99,10 @@ alias srcdus21='source /home/cshen/env/dus21'
 alias srcsha11='source /home/cshen/env/sha11'
 
 alias openstack='openstack --insecure'
+alias nova='nova --insecure'
+alias neutron='nova --insecure'
+alias cinder='cinder --insecure'
+alias glance='glance --insecure'
 
 alias sha11='ssh adm0001.sha11'
 alias dus21='ssh adm0001.dus21'
@@ -111,4 +115,7 @@ alias ffm10='ssh utl0001.ffm10'
 # https://github.com/Anthony25/gnome-terminal-colors-solarized
 eval `dircolors ~/.dir_colors/dircolors`
 
-export PATH="/home/cshen/tools:$PATH"
+export WORKON_HOME=$HOME/venv
+source /usr/local/bin/virtualenvwrapper.sh
+
+export PATH="/home/cshen/tools/node/bin:$PATH"

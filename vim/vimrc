@@ -13,7 +13,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ntpeters/vim-better-whitespace'
 
 " https://github.com/vim-syntastic/syntastic
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
 
 " https://github.com/pearofducks/ansible-vim
 Plug 'pearofducks/ansible-vim'
@@ -29,11 +29,11 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 filetype plugin indent on
-" show existing tab with 2 spaces width
-set tabstop=2
-" when indenting with '>', use 2 spaces width
-set shiftwidth=2
-" On pressing tab, insert 2 spaces
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
 set expandtab
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
