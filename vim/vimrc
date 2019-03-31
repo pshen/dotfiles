@@ -100,3 +100,5 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 " Tab navigation like Firefox.
 nnoremap <F5> :bprevious<cr>
 nnoremap <F6> :bnext<cr>
+
+source ~/.google_python_style.vim

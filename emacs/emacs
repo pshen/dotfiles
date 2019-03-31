@@ -1,10 +1,11 @@
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 (setq exec-path (cons "/usr/local/bin"  exec-path))
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
+;; PACKAGE MANAGEMENT
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
 (custom-set-variables
@@ -12,7 +13,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (sml-mode))))
+ '(package-selected-packages
+   (quote
+    (py-autopep8 flycheck material-theme magit flymd elpy python-mode racket-mode ## sml-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -20,8 +23,42 @@
  ;; If there is more than one, they won't work right.
  )
 
-(set-frame-parameter nil 'background-mode 'dark)
-(add-to-list 'custom-theme-load-path "/Users/chenjun.shen/.emacs.d/themes")
-(load-theme 'solarized t)
+;; THEME
 
-(set-default-font "Inconsolata 18")
+;(set-frame-parameter nil 'background-mode 'dark)
+;(add-to-list 'custom-theme-load-path "/Users/chenjun.shen/.emacs.d/themes")
+;(load-theme 'solarized t)
+
+(setq inhibit-startup-message t); hide the startup message
+(load-theme 'material-light t) ;; load material mode
+(global-linum-mode t) ;; enable line number globally
+
+;(set-default-font "Inconsolata 18")
+(set-default-font "Menlo 18")
+
+;; PYTHON MODE
+
+; enable elpy mode
+(elpy-enable)
+
+; replace flymake with flycheck
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+; autopep8
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save) ;; auto format code when save
+
+;; MARKDOWN MODE
+
+; flymd mode
+; solve browser compatibilty issue
+(defun my-flymd-browser-function (url)
+  (let ((process-environment (browse-url-process-environment)))
+    (apply 'start-process
+           (concat "firefox " url)
+           nil
+           "/usr/bin/open"
+           (list "-a" "firefox" url))))
+(setq flymd-browser-open-function 'my-flymd-browser-function)
